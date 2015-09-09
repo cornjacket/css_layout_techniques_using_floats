@@ -1,0 +1,127 @@
+/* Page styles 
+============================= */
+
+body {
+	font: normal 1.1em/1.5 sans-serif;
+	color: #222;
+	background-color: #edeff0;
+}
+
+html,
+body,
+.main-wrapper,
+.col {
+	height: 100%;
+}
+
+/* uncomment to have a container, comment for full page */
+.main-wrapper {
+	width: 90%;
+	margin: auto;
+}
+
+* {
+	box-sizing: border-box; /* DRT nice solution for fixing over-flow of width due to padding calculation */
+}
+
+/* Layout Element Colors
+==============================  */
+
+.main-header              { background-color: #384047; }
+.main-logo                { background-color: #5fcf80; }
+.main-nav li              { background-color: #3f8abf; }
+.primary-content          { background-color: #caebf6; }
+.secondary-content        { background-color: #bfe3d0; }
+.main-footer              { background-color: #b7c0c7; }
+
+/* Header, Banner and Footer Layout 
+=================================== */
+
+.main-header {
+
+    height: 120px;
+
+}
+
+.main-logo,
+.main-nav li {
+	float: left;
+}
+
+
+.main-logo,
+.main-nav {
+  text-align: center;
+  
+}
+
+.main-nav {
+	
+}
+
+.main-logo,
+.main-nav,
+.main-nav li {
+	padding: 5px;	
+}
+
+.main-nav li {
+    
+}
+
+.main-logo,
+.main-nav li {	
+	border-radius: 5px;
+}
+
+.main-logo {
+	
+}
+ 
+.main-logo a,
+.main-nav a {
+	color: white;
+	text-decoration: none;
+	
+}
+
+.main-footer {
+	text-align: center;
+	padding: 20px;
+}
+
+/* Column Layout
+================================ */
+
+.col {
+	
+}
+
+.primary-content {
+	
+}
+
+.secondary-content {
+	
+}
+
+/* Media Queries
+================================ */
+
+@media (max-width: 768px) {
+	.main-logo,
+	.main-nav,
+	.main-nav li,
+	.col {
+		display: block;
+		width: initial;
+		height: initial; /* added for col class */
+		margin: initial;
+	}
+	.main-nav {
+		padding-left: initial;
+	}
+	.main-nav li {
+		margin-top: 15px;
+	}
+}
