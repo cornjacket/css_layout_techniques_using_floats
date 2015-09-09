@@ -29,28 +29,20 @@ body {
 /* Main Layout Styles
 ================================ */
 
-/*.main-wrapper {
-	width: 90%;
-	margin: auto;
-}*/ /* commenting out has layout take full screen */
 .main-header {
-	
 	padding: 15px;
-}
-.main-logo,
-.main-nav li {
-	float: left;
 }
 
 .main-logo {
-	margin: 0 50px 0 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
+
 .main-nav li {
 	margin-top: 15px;
-	margin-right: 10px;
-	margin-left: 10px;
 }
-.main-logo a, 
+
+.main-logo a,
 .main-nav a {
 	display: block;
 	color: white;
@@ -59,11 +51,7 @@ body {
 	padding: 5px 15px;
 	border-radius: 5px;
 }
-.main-banner {
-	background: #dfe2e4;
-	text-align: center;
-	padding: 35px 15px;
-}
+
 .main-footer {
 	text-align: center;
 	padding-top: 5px;
@@ -75,61 +63,90 @@ body {
 
 .col {
 	padding: 20px;
-	float: left;
-	width: 30%;
 }
 
-.primary-content {
-	width: 40%;
-}
-
-
-.col:last-child {
-	float: right; 
-} /* this makes sure that the last col is aligned with the header's right edge */
+.extra-content,
+.main-banner {
+	display: none;
+} /* initially do not display, later allow for desktop display */
 
 /* Imagery
 ================================ */
-.feat-img {
-	width: 50%;
-	float: left;
-	margin-top: 10px;
-	margin-right: 25px;
-	margin-bottom: 10px; 
-	border: solid 1px;
-	padding: 5px;
 
-} /* margins should be given to the img and not to the surround text */
-
-/* Clearfix
-================================ */
-.group::after {
-	content: " ";
-	display: table;
-	clear: both;
-}
+ .feat-img {
+ 	width: 100%;
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+ 	border: solid 1px;
+ 	padding: 5px;
+ }
 
 /* Media Queries
 ================================ */
 
-@media (max-width: 768px) {
-	.main-wrapper,
-	.main-nav li, 	
-	.main-logo,
-	.col,
-	.feat-img {
-		width: initial;
-		height: initial;
-		float: initial; /* do not float in small screen */
-	}
-	.feat-img {
-		width: 100%;
-	}
-	.main-logo {
-		margin-right: 0; /* no need for margin in small screen */
-	}
-	.extra-content {
-		display: none;
-	}
-}
+@media (min-width: 769px) {
 
+	/* Header and Banner
+	================================ */
+
+    .main-logo,
+    .main-nav li {
+    	float: left;
+    }
+
+    .main-logo {
+    	margin-right: 50px;
+    }
+
+    .main-nav li {
+    	margin-left: 15px;
+    }
+
+    .main-banner {
+    	background: #dfe2e4;
+    	text-align: center;
+    	padding: 35px 15px;
+    }
+
+    /* Column Layout
+    ================================ */
+
+    .col {
+    	float: left;
+    	width: 30%;
+    }
+
+    .primary-content {
+    	width: 40%;
+    }
+
+    .col:last:child {
+    	float:right;
+    }
+
+    .extra-content,
+    .main-banner {
+    	display: block; /* Unhide from mobile view */
+    }
+
+
+
+    /* Float Clearfix
+    ================================ */
+
+    .group:after {
+    	content: " ";
+    	display: table;
+    	clear: both;
+    }
+
+    /* Imagery
+    ================================ */
+
+    .feat-img {
+    	width: 50%;
+    	float: left;
+    	margin-right: 25px;
+    }
+
+}
