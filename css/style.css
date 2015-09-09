@@ -29,10 +29,10 @@ body {
 /* Main Layout Styles
 ================================ */
 
-.main-wrapper {
+/*.main-wrapper {
 	width: 90%;
 	margin: auto;
-}
+}*/ /* commenting out has layout take full screen */
 .main-header {
 	
 	padding: 15px;
@@ -75,7 +75,31 @@ body {
 
 .col {
 	padding: 20px;
+	float: left;
+	width: 30%;
 }
+
+.primary-content {
+	width: 40%;
+}
+
+
+.col:last-child {
+	float: right; 
+} /* this makes sure that the last col is aligned with the header's right edge */
+
+/* Imagery
+================================ */
+.feat-img {
+	width: 50%;
+	float: left;
+	margin-top: 10px;
+	margin-right: 25px;
+	margin-bottom: 10px; 
+	border: solid 1px;
+	padding: 5px;
+
+} /* margins should be given to the img and not to the surround text */
 
 /* Clearfix
 ================================ */
@@ -90,11 +114,16 @@ body {
 
 @media (max-width: 768px) {
 	.main-wrapper,
-	.main-nav li, 
-	.main-logo {
+	.main-nav li, 	
+	.main-logo,
+	.col,
+	.feat-img {
 		width: initial;
 		height: initial;
 		float: initial; /* do not float in small screen */
+	}
+	.feat-img {
+		width: 100%;
 	}
 	.main-logo {
 		margin-right: 0; /* no need for margin in small screen */
